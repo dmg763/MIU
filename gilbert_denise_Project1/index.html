@@ -1,0 +1,91 @@
+<!doctype html>
+    
+    <!-- Denise M. Gilbert
+    MIU Term 1212
+    Project 1
+    November 29, 2012
+    Add Item HTML Page -->
+    
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>The Perfect Gift</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+    <div data-role="page" id="home">
+	
+	<div data-role="header" data-position="fixed">
+	    <h1><img src="images/smallLogo.png" alt="The Perfect Gift Logo" id="logo"></h1>
+	</div>
+	
+	<div data-role="content">
+	    <img src="images/CTA.png" alt="Main Home Page Image" id="cta">
+	    <p><a href="additem.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b">Add Gift Recipient</a></p>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar">
+		<ul>
+		    <li><a href="#home" data-icon="star" class="ui-btn-active">Home</a></li>
+		    <li><a href="#about" data-icon="gear">About</a></li>
+		</ul>
+	    </div>
+	</div>
+	
+    </div>
+    
+    <div data-role="page" id="about" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+	    <h1>The Perfect Gift</h1>
+	</div>
+	
+	<div data-role="content">
+	    <p>This is my ABOUT page.</p>
+	    <p>MAKE SURE TO INCLUDE THE FOLLOWING LINKS:</p>
+	    <ul>
+		<li>GitHub Page</li>
+		<li>Gold App</li>
+		<li>Bronze App</li>
+		<li>Home</li>
+	    </ul>
+	    <p>INFO ABOUT MYSELF</p>
+	    <p>CREDIT FOR IMAGES OR ASSISTANCE</p>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar">
+		<ul>
+		    <li><a href="#home" data-icon="gear">Home</a></li>
+		    <li><a href="#about" data-icon="star" class="ui-btn-active">About</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+	
+
+	<!-- JavaScript under here -->
+	
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
