@@ -22,6 +22,7 @@
 	<meta http-equiv="cleartype" content="on">
 	
 	<!-- StyleSheets under here -->
+	
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	
@@ -37,21 +38,13 @@
 	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo" id="logo"></h1>
 	</div>
 	
-	<div id="searchPage">
-	    <form>
-		<input type="submit" value="Search" data-inline="true"/>
-		<input type="search" name="search" id="search" value="" data-mini="true" />
-	    </form>
-	</div>
-	
-	
 	<div data-role="content" data-theme="b">
 	    <img src="img/CTA.png" alt="Main Home Page Image">
 	    <p><a href="additem.html" data-ajax="false" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" data-theme="b" data-mini="true" id="ctaButton">Add Gift Recipient</a></p>
 	</div>
 	
 	<div>
-	    <ul data-role="listview">
+	    <ul data-role="listview" data-filter="true" data-filter-theme="b" data-filter-placeholder="Search">
 		<li data-role="list-divider">Browse Categories . . .</li>
 		<li><a href="#">First Name</a></li>
 		<li><a href="#">Last Name</a></li>
@@ -66,6 +59,8 @@
 		<ul>
 		    <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
 		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/BRONZE/index.html" data-icon="gear">Bronze</a></li>
 		</ul>
 	    </div>
 	</div>
@@ -78,7 +73,11 @@
 	</div>
 	
 	<div data-role="content">
-	    <p>This is my ABOUT page.</p>
+	    <p>Contact:</p>
+	    <p>Denise M. Gilbert</p>
+	    <p>E-mail:  dmg763@fullsail.edu</p>
+	    <p>iChat:  dmg763@fullsail.edu</p>
+	    
 	    <p>MAKE SURE TO INCLUDE THE FOLLOWING LINKS:</p>
 	    <ul>
 		<li>GitHub Page</li>
@@ -86,7 +85,6 @@
 		<li>Bronze App</li>
 		<li>Home</li>
 	    </ul>
-	    <p>INFO ABOUT MYSELF</p>
 	    <p>CREDIT FOR IMAGES OR ASSISTANCE</p>
 	</div>
 	
@@ -95,6 +93,8 @@
 		<ul>
 		    <li><a href="#home" data-icon="home">Home</a></li>
 		    <li><a href="#about" data-icon="info" class="ui-btn-active ui-state-persist">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/BRONZE/index.html" data-icon="gear">Bronze</a></li>
 		</ul>
 	    </div>
 	</div>

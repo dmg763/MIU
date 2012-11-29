@@ -15,10 +15,6 @@ style.css Page*/
     margin-top: -60px;
 }
 
-#searchPage {
-    width: 180px;
-}
-
 #errors {
     color: red;
     font: small Arial;
@@ -263,7 +259,7 @@ a:visited {
     width: 180px;
 }
 
-nav {
+#localStorageNav {
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: center;
