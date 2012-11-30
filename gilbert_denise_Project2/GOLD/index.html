@@ -33,68 +33,197 @@
 
     <div data-role="page" id="home">
 	
-	<div data-role="header" data-position="fixed">
+	<div data-role="header" data-position="fixed" data-theme="a">
 	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo" id="logo"></h1>
 	</div>
 	
-	<div id="searchPage">
-	    <form>
-		<input type="submit" value="Search" data-inline="true"/>
-		<input type="search" name="search" id="search" value="" data-mini="true" />
-	    </form>
-	</div>
-	
-	
-	<div data-role="content" data-theme="b">
+	<div data-role="content" data-theme="d">
 	    <img src="img/CTA.png" alt="Main Home Page Image">
-	    <p><a href="additem.html" data-ajax="false" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" data-theme="b" data-mini="true" id="ctaButton">Add Gift Recipient</a></p>
+	    <a href="additem.html" data-ajax="false" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" data-theme="b" data-mini="true" id="ctaButton">Add Gift Recipient</a>
 	</div>
 	
-	<div>
-	    <ul data-role="listview">
-		<li data-role="list-divider">Browse Categories . . .</li>
-		<li><a href="#">First Name</a></li>
-		<li><a href="#">Last Name</a></li>
-		<li><a href="#">Zodiac Sign</a></li>
-		<li><a href="#">Gift Wanted</a></li>
-		<li><a href="#">Price</a></li>
+	<div data-role="content" data-theme="c">
+	    <ul data-role="listview" data-filter="true" data-divider-theme="b" data-filter-placeholder="Search" data-inset="true">
+		<li data-role="list-divider">Browse Gifting Categories . . .</li>
+		<li><a href="#flowers">Flowers</a></li>
+		<li><a href="#rating">Gift Rating</a></li>
+		<li><a href="#restaurants">Restaurants</a></li>
+		<li><a href="#wheretobuy">Where to Buy</a></li>
+		<li><a href="#zodiacSign">Zodiac Sign</a></li>
 	    </ul>
 	</div>
 	
 	<div data-role="footer" data-position="fixed" data-id="samefooter">
-	    <div data-role="navbar" data-iconpos="left">
+	    <div data-role="navbar" data-iconpos="top">
 		<ul>
 		    <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
 		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/BRONZE/index.html" data-icon="gear">Bronze</a></li>
 		</ul>
 	    </div>
 	</div>
 	
     </div>
     
-    <div data-role="page" id="about" data-add-back-btn="true" data-theme="b">
+    <div data-role="page" id="about" data-add-back-btn="true" data-theme="c">
 	<div data-role="header" data-position="fixed">
-	    <h1>The Perfect Gift</h1>
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo" id="logo"></h1>
 	</div>
 	
 	<div data-role="content">
-	    <p>This is my ABOUT page.</p>
-	    <p>MAKE SURE TO INCLUDE THE FOLLOWING LINKS:</p>
 	    <ul>
-		<li>GitHub Page</li>
-		<li>Gold App</li>
-		<li>Bronze App</li>
-		<li>Home</li>
+		<li><strong>CONTACT:</strong></li>
+		<li>Denise M. Gilbert</li>
+		<li>E-mail:  dmg763@fullsail.edu</li>
+		<li>iChat:  dmg763@fullsail.edu</li>
 	    </ul>
-	    <p>INFO ABOUT MYSELF</p>
-	    <p>CREDIT FOR IMAGES OR ASSISTANCE</p>
+	    
+	    <ul>
+		<li><strong>GITHUB & HOME LINKS</strong></li>
+		<li><a href="https://github.com/dmg763/MIU.git">GitHub Page</a></li>
+		<li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/GOLD/index.html">Gold</a></li>
+		<li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/BRONZE/index.html">Bronze</a></li>
+		<li><a href="#home" data-icon="home">Home</a></li>
+	    </ul>
+	    
+	    <ul>
+		<li><strong>CREDIT:</strong></li>
+		<li>Candles CTA Image - bazaardesigns.com</li>
+		<li>Zodiac Images - WDB - Garcya.us</li>
+	    </ul>
+
 	</div>
 	
 	<div data-role="footer" data-position="fixed" data-id="samefooter">
-	    <div data-role="navbar" data-iconpos="left">
+	    <div data-role="navbar" data-iconpos="top">
 		<ul>
 		    <li><a href="#home" data-icon="home">Home</a></li>
 		    <li><a href="#about" data-icon="info" class="ui-btn-active ui-state-persist">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <div data-role="page" id="flowers" data-add-back-btn="true" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo" id="logo"></h1>
+	</div>
+	
+	<div data-role="content">
+	    <p>FLOWERS PAGE</p>
+	    <p>This page will include information about favorite flowers.</p>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <div data-role="page" id="rating" data-add-back-btn="true" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo" id="logo"></h1>
+	</div>
+	
+	<div data-role="content">
+	    <p>RATING PAGE</p>
+	    <p>This page will include information about the highest-rated gifts.</p>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <div data-role="page" id="restaurants" data-add-back-btn="true" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo" id="logo"></h1>
+	</div>
+	
+	<div data-role="content">
+	    <p>RESTAURANTS</p>
+	    <p>This page will include information about favorite restaurants.</p>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <div data-role="page" id="wheretobuy" data-add-back-btn="true" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo" id="logo"></h1>
+	</div>
+	
+	<div data-role="content">
+	    <p>WHERE TO BUY PAGE</p>
+	    <p>This page will include information about the most popular stores.</p>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <div data-role="page" id="zodiacSign" data-add-back-btn="true" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo" id="logo"></h1>
+	</div>
+	
+	<div data-role="content" data-theme="c">
+	    <ul data-role="listview" data-inset="false">
+		<li><a><img src="img/aquarius.png" alt="Aquarius Image" class="ui-li-icon" id="aquarius">Aquarius</a><p>January 20 - February 18</p></li>
+		<li><a><img src="img/aries.png" alt="Aries Image" class="ui-li-icon" id="aries">Aries</a><p>March 21 - April 19</p></li>
+		<li><a><img src="img/cancer.png" alt="Cancer Image" class="ui-li-icon" id="cancer">Cancer</a><p>June 21 - July 22</p></li>
+		<li><a><img src="img/capricorn.png" alt="Capricorn Image" class="ui-li-icon" id="capricorn">Capricorn</a><p>December 22 - January 19</p></li>
+		<li><a><img src="img/gemini.png" alt="Gemini Image" class="ui-li-icon" id="gemini">Gemini</a><p>May 21 - June 20</p></li>
+		<li><a><img src="img/leo.png" alt="Leo Image" class="ui-li-icon" id="leo">Leo</a><p>July 23 - August 22</p></li>
+		<li><a><img src="img/libra.png" alt="Libra Image" class="ui-li-icon" id="libra">Libra</a><p>September 23 - October 22</p></li>
+		<li><a><img src="img/pisces.png" alt="Pisces Image" class="ui-li-icon" id="pisces">Pisces</a><p>February 19 - March 20</p></li>
+		<li><a><img src="img/sagittarius.png" alt="Sagittarius Image" class="ui-li-icon" id="sagittarius">Sagittarius</a><p>November 22 - December 21</p></li>
+		<li><a><img src="img/scorpio.png" alt="Scorpio Image" class="ui-li-icon" id="scorpio">Scorpio</a><p>October 23 - November 21</p></li>
+		<li><a><img src="img/taurus.png" alt="Taurus Image" class="ui-li-icon" id="taurus">Taurus</a><p>April 20 - May 20</p></li>
+		<li><a><img src="img/virgo.png" alt="Virgo Image" class="ui-li-icon" id="virgo">Virgo</a><p>August 23 - September 22</p></li>
+	    </ul>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project2/BRONZE/index.html" data-icon="gear">Bronze</a></li>
 		</ul>
 	    </div>
 	</div>
