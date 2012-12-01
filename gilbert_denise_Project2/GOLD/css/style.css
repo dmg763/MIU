@@ -11,7 +11,14 @@ style.css Page*/
 }
 
 #zodiacSign p {
+    font-size: 10px;
+    font-weight: normal;
     margin-left: 40px;
+}
+
+#zodiacSign img {
+    margin: 0px;
+    padding: 0px;
 }
 
 #errors {
