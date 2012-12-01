@@ -6,7 +6,11 @@ style.css Page*/
 
 #ctaButton {
     position: absolute;
+<<<<<<< HEAD
     margin-left: 120px;
+=======
+    margin-left: 130px;
+>>>>>>> origin/master
     margin-top: -45px;
 }
 
