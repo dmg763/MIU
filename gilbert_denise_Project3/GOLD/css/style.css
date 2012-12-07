@@ -1,13 +1,73 @@
 /* Denise M. Gilbert
 MIU Term 1212
-Projects 1 & 2
-November 29, 2012
+Projects 3
+December 6, 2012
 style.css Page*/
+
+body {
+    letter-spacing: .02em;
+}
+
+label.error {
+    color: red;
+    font-size: large;
+}
+
+.liLabels {
+    font-size: 18px;
+    letter-spacing: .06em;
+}
+
+.pageInfo {
+    color: #A23ABF;
+    font-family: Times;
+    font-size: x-large;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.topParagraph {
+    font-size: large;
+}
+
+.newsStreamHeader p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: .5px;
+    margin-bottom: .5px;
+}
+
+.secondLevel p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 10px;
+}
+
+.thirdLevel p {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 20px;
+}
 
 #ctaButton {
     position: absolute;
-    margin-left: 130px;
-    margin-top: -45px;
+    margin-left: 110px;
+    margin-top: -55px;
+}
+
+.browseListDivider {
+    color: #581E59;
+    font-size: larger;
+    font-style: italic;
+}
+
+#addRecipientSearch p {
+    color: #FFF;
 }
 
 #zodiacSign p {
@@ -33,9 +93,9 @@ style.css Page*/
     font-weight: bold;
 }
 
-#requiredNote {
+.requiredNote {
     color: #FF0000;
-    font-size: small;
+    font-size: medium;
     font-weight: bold;
 }
 
@@ -49,13 +109,13 @@ legend {
     border-color: #662071;
     border-radius: 5px;
     color: #37FDFC;
-    font-size: larger;
+    font-size: x-large;
     font-variant: small-caps;
     font-weight: bold;
     letter-spacing: .02em;
     padding: 1px;
     text-align: center;
-    width: 260px;
+    width: 290px;
 }
 
 label {
@@ -66,39 +126,24 @@ label {
     margin-right: 2px;
 }
 
+#purchasedLabel {
+    color: #A23ABF;
+    font-family: Times;
+    font-size: larger;
+    font-weight: bold;
+}
+
+#piercedEarsLabel {
+    color: #A23ABF;
+    font-family: Times;
+    font-size: larger;
+    font-weight: bold;
+}
+
 ul {
     list-style-type: none;
     margin: 2px;
     padding: 2px;
-}
-
-input {
-    color: #643AE6;
-    border-color: purple;
-    border-width: 1px;
-    font-size: medium;
-    font-family: Arial;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 240px;
-}
-
-textarea {
-    color: #643AE6;
-    border-color: purple;
-    border-width: 1px;
-    font-size: medium;
-    font-family: Arial;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 250px;
-}
-
-input[type="range"] {
-    -webkit-appearance: none;
-    -webkit-border-radius: 10px;
-    background-image: -webkit-linear-gradient(top, #80278C, #AF36BF, #80278C);
-    width: 225px;
 }
 
 #groups {
@@ -110,89 +155,6 @@ input[type="range"] {
     font-weight: bold;
     text-transform: uppercase;
     width: 260px;
-}
-
-#sliderValue {
-    background-color: #882A97;
-    border: 2px ridge #C0C0C0;
-    color: #37FDFC;
-    font: large Times;
-    font-weight: bold;
-    padding: 3px;
-}
-
-#ringsize {
-    color: #643AE6;
-    border-color: purple;
-    border-width: 1px;
-    font-size: small;
-    font-weight: bold;
-    margin-right: 15px;
-    width: 45px;
-}
-
-#piercedEars {
-    color: #37FDFC;
-    border-color: purple;
-    border-width: 1px;
-    font-size: medium;
-    font-weight: bold;
-    width: 25px;
-}
-
-#piercedEars:checked {
-    background-color: purple;
-}
-
-body {
-    background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.02, #5C246E),
-	color-stop(0.64, #9A2EA5),
-	color-stop(0.72, #76237F)
-);
-}
-
-.purchased {
-    -webkit-transform: translatey(5px);
-    background-color: #FFF;
-    border: 1px solid #000;
-    border-radius: 50px;
-    padding: 9px;
-    position: relative;
-    width: 10px;
-}
-
-.purchased:checked {
-    background-color: #EF93FD;
-    border: 1px solid #000;
-}
-
-.purchased:checked:after {
-    background: #80278C;
-    border-radius: 50px;
-    content: ' ';
-    height: 12px;
-    width: 12px;
-    left: 3px;
-    position: absolute;
-    top: 3px;
-}
-
-#saveRecipient {
-    background-color: #662071;
-    border: 3px outset silver;
-    border-radius: 15px;
-    color: #FFF;
-    font-style: italic;
-    font-size: large;
-    font-weight: bold;
-    font-family: Times;
-    margin-top: 5px;
-    text-transform: capitalize;
-    width: 180px;
 }
 
 #localStorageNav {
@@ -223,16 +185,6 @@ body {
 }
 
 #addRecipient:visited {
-    color: #C0C0C0;
-}
-
-#displayData {
-    color: #F54D70;
-    font: medium Times;
-    font-weight: bold;
-}
-
-#displayData:visited {
     color: #C0C0C0;
 }
 
