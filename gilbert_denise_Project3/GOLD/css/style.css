@@ -4,6 +4,10 @@ Projects 3
 December 6, 2012
 style.css Page*/
 
+#addRecipientErrorsLink {
+    display: none;
+}
+
 body {
     letter-spacing: .02em;
 }
