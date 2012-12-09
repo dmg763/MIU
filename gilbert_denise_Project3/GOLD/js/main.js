@@ -10,20 +10,26 @@ $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 });
 
+var parseAddRecipientForm = function(data) {
+				// Uses Form Data Here
+				console.log(data);
+		};
+
 // ADD RECIPIENT PAGE
 
 $('#addItem').on('pageinit', function(){
 
 		var myForm = $('#addRecipientForm'),
-			formErrorLink = $('#addRecipientErrorsLink');
+			addRecipientErrorsLink = $('#addRecipientErrorsLink');
 
 		    myForm.validate({			
 			invalidHandler: function(form, validator) {
-				formErrorLink.click();
+				addRecipientErrorsLink.click();
+				console.log(validator.submitted);
 				var html = '';
 				for (var key in validator.submitted) {
 					var label = $('label[for^="'+ key +'"]').not('[generated]');
-					var legend = label.closest('fieldset').find('.ui-controlgroup-label');
+					var legend = label.closest('fieldset').find('.ui-input-text-label');
 					var fieldName = legend.length ? legend.text() : label.text();
 					html += '<li>'+ fieldName +'</li>';
 				};
@@ -80,7 +86,7 @@ $('#addItem').on('pageinit', function(){
 		// Gather All Form Field Values and Store in an Object
 		// Object Properties Will Contain an Array with the Form Lable and Input Value
 	    //getSelectedRadio();
-	    getCheckboxValue();
+	    //getCheckboxValue();
 	    var item = {};
 	    item.fname = ["First Name:", document.getElementById("fname").value];
 	    item.lname = ["Last Name:", document.getElementById("lname").value];
@@ -104,44 +110,10 @@ $('#addItem').on('pageinit', function(){
 	    // Use Stringify to Convert the Item Object to a String
 	    localStorage.setItem(id, JSON.stringify(item));
 	    alert("Recipient Information is Saved!");
+		
     };
 	
-	var getData = function () {
 	
-	if (localStorage.length === 0) {
-		alert("There is no data in local storage to display.  Default JSON data was added.");
-		autoFillData();
-	}
-	var makeDiv = document.getElementById("data");
-	makeDiv.setAttribute("class", "items");
-	var makeList = document.createElement("ul");
-	makeList.setAttribute("class", "rows");
-	makeDiv.appendChild(makeList);
-	document.body.appendChild(makeDiv);
-	document.getElementById("items").style.display = "block";
-	for (var i = 0, j = localStorage.length; i < j; i += 1) {
-		var makeLi = document.createElement("li");
-		var linksLi = document.createElement("li");
-		makeList.appendChild(makeLi);
-		var key = localStorage.key(i);
-		var value = localStorage.getItem(key);
-		// Convert String Value from Local Storage Back to an Object
-		var obj = JSON.parse(value);
-		var makeSubList = document.createElement("ul");
-		var makeIconList = document.createElement("ul");
-		makeLi.appendChild(makeSubList);
-		//getImage(obj.group[1], makeSubList);
-		//getIcon(obj.sunSign[1], makeSubList);
-		for (var n in obj) {
-			var makeSubLi = document.createElement("li");
-			makeSubList.appendChild(makeSubLi);
-			var optSubText = obj[n][0] + " " + obj[n][1];
-			makeSubLi.innerHTML = optSubText;
-			makeSubList.appendChild(linksLi);
-		}
-		makeItemLinks(localStorage.key(i), linksLi); // Create Edit and Delete Buttons/Links for Each Record in Local Storage
-	}
-};
 	
 	// Get Image That is Associated with the Favorite Color List Option Being Displayed
     
@@ -266,6 +238,19 @@ $('#addItem').on('pageinit', function(){
 	}
 };
 
+// Function to Clear Local Storage Data
+    
+    function clearLocal() {
+	    if (localStorage.length === 0) {
+		    alert("There is no data in local storage to delete.");
+	    } else {
+		    localStorage.clear();
+		    alert("All local storage data has been deleted.");
+		    window.location.reload();
+		    return false;
+	    }
+    }
+
 
 		
 		var autofillData = function () {
@@ -273,10 +258,56 @@ $('#addItem').on('pageinit', function(){
 		for (var n in json) {
 			var id = Math.floor(Math.random() * 1000000001);
 			localStorage.setItem(id, JSON.stringify(json[n]));
+			localStorage.show();
 		}
 	};
 	
 	});
+
+var getData = function () {
+	if (localStorage.length === 0) {
+		alert("There is no data in local storage to display.  Default JSON data was added.");
+		autoFillData();
+	}
+	var makeDiv = document.getElementById("div");
+	makeDiv.setAttribute("id", "items");
+	var makeList = document.createElement("ul");
+	makeList.setAttribute("id", "rows");
+	makeDiv.appendChild(makeList);
+	document.body.appendChild(makeDiv);
+	document.getElementById("items").style.display = "block";
+	for (var i = 0, j = localStorage.length; i < j; i += 1) {
+		var makeLi = document.createElement("li");
+		var linksLi = document.createElement("li");
+		makeList.appendChild(makeLi);
+		var key = localStorage.key(i);
+		var value = localStorage.getItem(key);
+		// Convert String Value from Local Storage Back to an Object
+		var obj = JSON.parse(value);
+		var makeSubList = document.createElement("ul");
+		//var makeIconList = document.createElement("ul");
+		makeLi.appendChild(makeSubList);
+		//getImage(obj.group[1], makeSubList);
+		//getIcon(obj.sunSign[1], makeSubList);
+		for (var n in obj) {
+			var makeSubLi = document.createElement("li");
+			makeSubList.appendChild(makeSubLi);
+			var optSubText = obj[n][0] + " " + obj[n][1];
+			makeSubLi.innerHTML = optSubText;
+			makeSubList.appendChild(linksLi);
+		}
+		makeItemLinks(localStorage.key(i), linksLi);  // Create Edit and Delete Buttons/Links for Each Record in Local Storage
+	}
+};
+
+//var displayDataLink = document.getElementById("displayData");
+    //displayDataLink.addEventListener("click", getData);
+	
+	$("displayData").click(function() {
+	localStorage.load();
+});
+	
+	
 
 
 

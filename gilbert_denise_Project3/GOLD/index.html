@@ -108,17 +108,17 @@
 		
 		    <div data-role="fieldcontain">
 			<label for="fname"><strong>*First Name:</strong></label>
-			<input type="text" id="fname" placeholder="Enter Recipient's First Name" required="required"/>
+			<input type="text" name="fname" id="fname" placeholder="Enter Recipient's First Name" class="required"/>
 		    </div>
 		    
 		    <div data-role="fieldcontain">
 			<label for="lname"><strong>*Last Name:</strong></label>
-			<input type="text" id="lname" placeholder="Enter Recipient's Last Name" required="required"/>
+			<input type="text" name="lname" id="lname" placeholder="Enter Recipient's Last Name" class="required"/>
 		    </div>
 		    
 		    <div data-role="fieldcontain">
 			<label for="bday"><strong>Birthday:</strong></label>
-			<input type="date" id="bday"/>
+			<input type="date" name="bday" id="bday"/>
 		    </div>
 		
 		</fieldset>
@@ -128,22 +128,22 @@
 		
 		    <div data-role="fieldcontain">
 			<label for="topsize"><strong>Tops/Shirts/Blouses:</strong></label>
-			<input type="text" id="topsize" placeholder="Enter Recipient's Top Size"/>
+			<input type="text" name="topsize" id="topsize" placeholder="Enter Recipient's Top Size"/>
 		    </div>
 		    
 		    <div data-role="fieldcontain">
 			<label for="bottomsize"><strong>Bottoms/Pants/Skirts:</strong></label>
-			<input type="text" id="bottomsize" placeholder="Enter Recipient's Bottom Size"/>
+			<input type="text" name="bottomsize" id="bottomsize" placeholder="Enter Recipient's Bottom Size"/>
 		    </div>
 		    
 		    <div data-role="fieldcontain">
 			<label for="shoesize"><strong>Footwear:</strong></label>
-			<input type="text" id="shoesize" placeholder="Enter Recipient's Shoe Size"/>
+			<input type="text" name="shoesize" id="shoesize" placeholder="Enter Recipient's Shoe Size"/>
 		    </div>
 		    
 		    <div data-role="fieldcontain">
 			<label for="ringsize" data-theme="k"><strong>Ring Size:</strong></label>
-			<select id="ringsize" data-native-menu="false" data-theme="k">
+			<select name="ringsize" id="ringsize" data-native-menu="false" data-theme="k">
 			    <option value="Select a Ring Size" selected="selected">Select a Ring Size</option>
 			    <option value="5">5</option>
 			    <option value="6">6</option>
@@ -169,7 +169,7 @@
 		
 		    <div data-role="fieldcontain">
 			<label for="color"><strong>Color:</strong></label>
-			<select id="color" data-native-menu="false" data-theme="k">
+			<select name="color" id="color" data-native-menu="false" data-theme="k">
 			    <option value="Select a Color" selected="selected">Select a Color</option>
 			    <option value="Black">Black</option>
 			    <option value="Blue">Blue</option>
@@ -184,17 +184,17 @@
 		    
 		    <div data-role="fieldcontain">
 			<label for="flowers"><strong>Flower(s):</strong></label>
-			<input type="text" id="flowers" placeholder="Enter Recipient's Favorite Flowers"/>
+			<input type="text" name="flowers" id="flowers" placeholder="Enter Recipient's Favorite Flowers"/>
 		    </div>
 		    
 		    <div data-role="fieldcontain">
 			<label for="foods"><strong>Food(s):</strong></label>
-			<input type="text" id="foods" placeholder="Enter Recipient's Favorite Foods"/>
+			<input type="text" name="foods" id="foods" placeholder="Enter Recipient's Favorite Foods"/>
 		    </div>
 		    
 		    <div data-role="fieldcontain">
 			<label for="restaurants"><strong>Restaurant(s):</strong></label>
-			<textarea id="restaurants" placeholder="Enter Recipient's Favorite Restaurants"></textarea>
+			<textarea name="restaurants" id="restaurants" placeholder="Enter Recipient's Favorite Restaurants"></textarea>
 		    </div>
 		
 		</fieldset>
@@ -209,17 +209,17 @@
 		    
 		    <div data-role="fieldcontain">
 			<label for="giftwanted"><strong>Gift Wanted:</strong></label>
-			<input type="text" id="giftwanted" placeholder="Enter a Gift Wanted by Recipient"/>
+			<input type="text" name="giftwanted" id="giftwanted" placeholder="Enter a Gift Wanted by Recipient"/>
 		    </div>
 		    
 		    <div data-role="fieldcontain">
 			<label for="price"><strong>Price:</strong></label>
-			<input type="text" id="price" placeholder="Enter the Price of the Gift Wanted"/>
+			<input type="text" name="price" id="price" placeholder="Enter the Price of the Gift Wanted"/>
 		    </div>
 		    
 		    <div data-role="fieldcontain">
 			<label for="wheretobuy"><strong>Where to Buy:</strong></label>
-			<textarea id="wheretobuy" placeholder="Enter Where to Buy the Gift Wanted"></textarea>
+			<textarea name="wheretobuy" id="wheretobuy" placeholder="Enter Where to Buy the Gift Wanted"></textarea>
 		    </div>
 		    
 		    <div data-role="fieldcontain" >
@@ -488,7 +488,7 @@
 	    <h1>Missing Fields!</h1>
 	</div>
 	
-	<div data-role="content" data-theme="e">
+	<div data-role="content">
 	    <ul>
 		<li>Test</li>
 	    </ul>
