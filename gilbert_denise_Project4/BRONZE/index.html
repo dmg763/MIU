@@ -1,0 +1,338 @@
+<!doctype html>
+    
+    <!-- Denise M. Gilbert
+    MIU Term 1212
+    Projects 1 & 2
+    November 29, 2012
+    Add Item HTML Page -->
+    
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>The Perfect Gift</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="themes/MyGiftBook1.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<link rel="stylesheet" href="CSS/style.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+    <div data-role="page" id="home">
+	
+	<div data-role="header" data-position="fixed" data-theme="c">
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo"></h1>
+	</div>
+	
+	<div data-role="content" data-theme="c">
+	    <img src="img/CTA3.png" alt="Main Home Page Image">
+	    <a href="additem.html" data-ajax="false" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" data-theme="d" data-mini="true" id="ctaButton">Add Gift Recipient</a>
+	</div>
+	
+	<div data-role="content" data-theme="a">
+	    <ul data-role="listview" data-filter="true" data-divider-theme="b" data-filter-placeholder="Search" data-inset="false">
+		<li data-role="list-divider" data-inset="false">Browse Gifting Categories . . .</li>
+	    </ul>
+	</div>
+	
+	<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="false">
+	    <h3><img src="img/heart3.png" alt="Favorites Icon">Favorites</h3>
+		
+		<div data-role="collapsible" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3><img src="img/flowers.png" alt="Flowers Icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flowers</h3>
+		</div>
+		
+		<div data-role="collapsible" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3><img src="img/rating.png" alt="Gift Rating Icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gift Rating</h3>
+		</div>
+		
+		<div data-role="collapsible" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3><img src="img/restaurants.png" alt="Restaurants Icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Restaurants</h3>
+		</div>
+		
+		<div data-role="collapsible" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3><img src="img/wheretobuy.png" alt="Where to Buy Icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Where to Buy</h3>
+		</div>
+	</div>
+	
+	<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="false" id="giftideas">
+	    <h3><img src="img/gift3.png" alt="Rating Icon">Gift Ideas</h3>
+		
+		<div data-role="collapsible" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3><img src="img/chocolates2.png" alt="Chocolates Icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chocolates</h3>
+		</div>
+		
+		<div data-role="collapsible" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3><img src="img/rose.png" alt="Flowers Icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flowers</h3>
+		</div>
+		
+		<div data-role="collapsible" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3><img src="img/giftbasket.png" alt="Gift Basket Icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gift Baskets</h3>
+		</div>
+		
+		<div data-role="collapsible" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3><img src="img/spa.png" alt="Spa Gifts Icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spa Gifts</h3>
+		</div>
+		
+		<div data-role="collapsible" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3><img src="img/Wine.png" alt="Wines Icon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wines</h3>
+		</div>
+	</div>
+	
+	<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="false">
+	    <h3><img src="img/recipients4.png" alt="Restaurants Icon">Recipients</h3>
+		
+		<div data-role="collapsible" data-mini="true" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3>First Name</h3>
+		</div>
+		
+		<div data-role="collapsible" data-mini="true" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3>Last Name</h3>
+		</div>
+		
+	</div>
+	
+	<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="false">
+	    <h3><img src="img/wish2.png" alt="Where to Buy Icon">Wish Lists</h3>
+		
+		<div data-role="collapsible" data-mini="true" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3>Higest Rated</h3>
+		</div>
+		
+		<div data-role="collapsible" data-mini="true" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3>Gifts Wanted</h3>
+		</div>
+		
+		<div data-role="collapsible" data-mini="true" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3>Price</h3>
+		</div>
+		
+		<div data-role="collapsible" data-mini="true" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3>Where to Buy</h3>
+		</div>
+	</div>
+	
+	<div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="false">
+	    <h3><img src="img/silverZodiacSigns.png" alt="Zodiac Icon">Zodiac Signs</h3>
+		
+		<div data-role="collapsible" data-mini="true" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3>Signs and Birthdates</h3>
+		    <ul>
+		    <li><a href="#zodiacSigns" data-icon="info">Zodiac Signs</a></li>
+		    </ul>
+		</div>
+		
+		<div data-role="collapsible" data-mini="true" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3>Sun Sign Gifts</h3>
+		</div>
+		
+		<div data-role="collapsible" data-mini="true" data-theme="b" data-content-theme="a" data-inset="true">
+		    <h3>More Zodiac Info</h3>
+		</div>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+	
+    </div>
+    
+    <div data-role="page" id="about" data-add-back-btn="true" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo"></h1>
+	</div>
+	
+	<div data-role="content">
+	    <ul>
+		<li><strong>CONTACT:</strong></li>
+		<li>Denise M. Gilbert</li>
+		<li>E-mail:  dmg763@fullsail.edu</li>
+		<li>iChat:  dmg763@fullsail.edu</li>
+	    </ul>
+	    
+	    <ul>
+		<li><strong>GITHUB & HOME LINKS</strong></li>
+		<li><a href="https://github.com/dmg763/MIU.git">GitHub Page</a></li>
+		<li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html">Gold</a></li>
+		<li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html">Bronze</a></li>
+		<li><a href="#home" data-icon="home">Home</a></li>
+	    </ul>
+	    
+	    <ul>
+		<li><strong>CREDIT:</strong></li>
+		<li>Candles CTA Image - bazaardesigns.com</li>
+		<li>Zodiac Images - WDB - Garcya.us</li>
+	    </ul>
+
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info" class="ui-btn-active ui-state-persist">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <div data-role="page" id="flowers" data-add-back-btn="true" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo"></h1>
+	</div>
+	
+	<div data-role="content">
+	    <p>FLOWERS PAGE</p>
+	    <p>This page will include information about favorite flowers.</p>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <div data-role="page" id="rating" data-add-back-btn="true" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo"></h1>
+	</div>
+	
+	<div data-role="content">
+	    <p>RATING PAGE</p>
+	    <p>This page will include information about the highest-rated gifts.</p>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <div data-role="page" id="restaurants" data-add-back-btn="true" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo"></h1>
+	</div>
+	
+	<div data-role="content">
+	    <p>RESTAURANTS</p>
+	    <p>This page will include information about favorite restaurants.</p>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <div data-role="page" id="wheretobuy" data-add-back-btn="true" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo"></h1>
+	</div>
+	
+	<div data-role="content">
+	    <p>WHERE TO BUY PAGE</p>
+	    <p>This page will include information about the most popular stores.</p>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <div data-role="page" id="zodiacSigns" data-add-back-btn="true" data-theme="d">
+	<div data-role="header" data-position="fixed">
+	    <h1><img src="img/smallLogo.png" alt="The Perfect Gift Logo"></h1>
+	</div>
+	
+	<div class="ui-grid-b" id="zodiacGrid">
+	    
+	    <div class="ui-block-a">
+		<a><img src="img/aquarius2.png" alt="Aquarius Image" id="aquarius">Aquarius</a>
+		<a><img src="img/capricorn2.png" alt="Capricorn Image" id="capricorn">Capricorn</a>
+		<a><img src="img/libra2.png" alt="Libra Image" id="libra">Libra</a>
+		<a><img src="img/scorpio2.png" alt="Scorpio Image" id="scorpio">Scorpio</a>
+	    </div>
+	    
+	    <div class="ui-block-b">
+		<a><img src="img/aries2.png" alt="Aries Image" id="aries">Aries</a>
+		<a><img src="img/gemini2.png" alt="Gemini Image" id="gemini">Gemini</a>
+		<a><img src="img/pisces2.png" alt="Pisces Image" id="pisces">Pisces</a>
+		<a><img src="img/taurus2.png" alt="Taurus Image" id="taurus">Taurus</a>
+	    </div>
+	    
+	    <div class="ui-block-c">
+		<a><img src="img/cancer2.png" alt="Cancer Image" id="cancer">Cancer</a>
+		<a><img src="img/leo2.png" alt="Leo Image" id="leo">Leo</a>
+		<a><img src="img/sagittarius2.png" alt="Sagittarius Image" id="sagittarius">Sagittarius</a>
+		<a><img src="img/virgo2.png" alt="Virgo Image" id="virgo">Virgo</a>
+	    </div>
+	    
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+
+	<!-- JavaScript under here -->
+	
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

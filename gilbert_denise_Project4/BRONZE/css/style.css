@@ -1,0 +1,264 @@
+/* Denise M. Gilbert
+MIU Term 1212
+Projects 1 & 2
+November 29, 2012
+style.css Page*/
+
+#ctaButton {
+    position: absolute;
+    margin-left: 110px;
+    margin-top: -60px;
+}
+
+#zodiacSign p {
+    margin-left: 40px;
+}
+
+.ui-grid-b {
+    text-align: center;
+}
+
+#errors {
+    color: red;
+    font: small Arial;
+    font-weight: bold;
+}
+
+#requiredNote {
+    color: #FF0000;
+    font-size: small;
+    font-weight: bold;
+}
+
+fieldset {
+    background-color: #F5F5F5;
+    border: 2px ridge #C0C0C0;
+}
+
+legend {
+    background-color: #882A97;
+    border-color: #662071;
+    border-radius: 5px;
+    color: #37FDFC;
+    font-size: larger;
+    font-variant: small-caps;
+    font-weight: bold;
+    letter-spacing: .02em;
+    padding: 1px;
+    text-align: center;
+    width: 260px;
+}
+
+label {
+    color: #A23ABF;
+    font-family: Times;
+    font-size: large;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 2px;
+    padding: 2px;
+}
+
+input {
+    color: #643AE6;
+    border-color: purple;
+    border-width: 1px;
+    font-size: medium;
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 240px;
+}
+
+textarea {
+    color: #643AE6;
+    border-color: purple;
+    border-width: 1px;
+    font-size: medium;
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 250px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -webkit-border-radius: 10px;
+    background-image: -webkit-linear-gradient(top, #80278C, #AF36BF, #80278C);
+    width: 225px;
+}
+
+#groups {
+    color: #643AE6;
+    border-color: purple;
+    border-width: 1px;
+    font-size: medium;
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 260px;
+}
+
+#sliderValue {
+    background-color: #882A97;
+    border: 2px ridge #C0C0C0;
+    color: #37FDFC;
+    font: large Times;
+    font-weight: bold;
+    padding: 3px;
+}
+
+#ringsize {
+    color: #643AE6;
+    border-color: purple;
+    border-width: 1px;
+    font-size: small;
+    font-weight: bold;
+    margin-right: 15px;
+    width: 45px;
+}
+
+#piercedEars {
+    color: #37FDFC;
+    border-color: purple;
+    border-width: 1px;
+    font-size: medium;
+    font-weight: bold;
+    width: 25px;
+}
+
+#piercedEars:checked {
+    background-color: purple;
+}
+
+body {
+    background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.02, #5C246E),
+	color-stop(0.64, #9A2EA5),
+	color-stop(0.72, #76237F)
+);
+}
+
+.purchased {
+    -webkit-transform: translatey(5px);
+    background-color: #FFF;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 9px;
+    position: relative;
+    width: 10px;
+}
+
+.purchased:checked {
+    background-color: #EF93FD;
+    border: 1px solid #000;
+}
+
+.purchased:checked:after {
+    background: #80278C;
+    border-radius: 50px;
+    content: ' ';
+    height: 12px;
+    width: 12px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+}
+
+#saveRecipient {
+    background-color: #662071;
+    border: 3px outset silver;
+    border-radius: 15px;
+    color: #FFF;
+    font-style: italic;
+    font-size: large;
+    font-weight: bold;
+    font-family: Times;
+    margin-top: 5px;
+    text-transform: capitalize;
+    width: 180px;
+}
+
+#localStorageNav {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#items {
+    background-color: #FAFAFA;
+    border: 2px inset #C0C0C0;
+}
+
+#clearData {
+    color: #F54D70;
+    font: medium Times;
+    font-weight: bold;
+}
+
+#clearData:visited {
+    color: #C0C0C0;
+}
+
+#addRecipient {
+    color: #F54D70;
+    font: medium Times;
+    font-weight: bold;
+}
+
+#addRecipient:visited {
+    color: #C0C0C0;
+}
+
+#displayData {
+    color: #F54D70;
+    font: medium Times;
+    font-weight: bold;
+}
+
+#displayData:visited {
+    color: #C0C0C0;
+}
+
+#editRecipient {
+    color: #F54D70;
+    float: left;
+    font: medium Times;
+    font-weight: bold;
+}
+
+#editRecipient:visited {
+    color: #C0C0C0;
+}
+
+#deleteRecipient {
+    color: #F54D70;
+    float: right;
+    font: medium Times;
+    font-weight: bold;
+}
+
+#sunSign {
+    color: #643AE6;
+    font-size: medium;
+    font-family: Arial;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+footer {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#rows ul > li:nth-child(odd) { background-color:#F2CEF2; border: 1px dotted purple;}
+#rows ul > li:nth-child(even) { background-color:white; }

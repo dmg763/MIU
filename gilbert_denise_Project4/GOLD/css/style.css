@@ -1,0 +1,312 @@
+/* Denise M. Gilbert
+MIU Term 1212
+Projects 4
+December 13, 2012
+style.css Page*/
+
+body {
+    background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.02, #5C246E),
+	color-stop(0.64, #9A2EA5),
+	color-stop(0.72, #76237F)
+);
+}
+
+#tabbed_box {  
+    margin: 0px auto 0px auto;  
+    width:300px;  
+}
+
+.tabbed_area {  
+    border:1px solid #494e52;  
+    background-color:#730260;  
+    padding:8px;  
+}
+
+ul.tabs {  
+    margin:0px; padding:0px;  
+}  
+ul.tabs li {  
+    list-style:none;  
+    display:inline;  
+}
+
+ul.tabs li a {  
+    background-color:#A60D8C;  
+    color:#ffffff;  
+    padding:6px 8px 6px 8px;  
+    text-decoration:none;  
+    font-size:16px;  
+    font-family: Times;  
+    font-weight:bold;  
+    font-variant: small-caps; 
+    border:1px solid #730260;  
+}  
+ul.tabs li a:hover {  
+    background-color:#A60D8C;  
+    border-color:#ffffff;  
+}  
+ul.tabs li a.active {  
+    background-color:#ffffff;  
+    color:#730260;  
+    border:1px solid #464c54;  
+    border-bottom: 1px solid #ffffff;  
+}
+
+.content {  
+    background-color:#ffffff;  
+    padding:10px;  
+    border:1px solid #730260;  
+}  
+#content_2, #content_3 { display:none; }
+
+ul.tabs {  
+    margin:0px; padding:0px;  
+    margin-top:5px;  
+    margin-bottom:6px;  
+}
+
+.content ul {  
+    margin: 0px;  
+    padding: 0px 15px 0px 15px;  
+}  
+.content ul li {  
+    list-style: none;  
+    border-bottom: 1px solid #730260;  
+    padding-top: 10px;  
+    padding-bottom: 10px;  
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.content ul li:last-child {  
+    border-bottom: none;  
+} 
+
+.logo {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    margin-left: 15px;
+}
+
+.login {
+    float: right;
+    margin-right: 15px;
+    margin-top: 0px;
+}
+
+#addRecipientErrorsLink {
+    display: none;
+}
+
+body {
+    letter-spacing: .02em;
+}
+
+label.error {
+    color: red;
+    font-size: large;
+}
+
+.liLabels {
+    font-size: 18px;
+    letter-spacing: .06em;
+}
+
+.pageInfo {
+    color: #A61492;
+    font-family: Times;
+    font-size: x-large;
+    font-variant: small-caps;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.topParagraph {
+    font-size: large;
+}
+
+.newsStreamHeader p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: .5px;
+    margin-bottom: .5px;
+}
+
+.secondLevel p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 10px;
+}
+
+.thirdLevel p {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 20px;
+}
+
+#ctaButton {
+    position: absolute;
+    margin-left: 110px;
+    margin-top: -55px;
+}
+
+.browseListDivider {
+    color: #581E59;
+    font-size: larger;
+    font-style: italic;
+}
+
+#addRecipientSearch p {
+    color: #FFF;
+}
+
+#zodiacSign p {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+#zodiacSign img {
+    margin: 0px;
+    padding: 0px;
+}
+
+#browze p {
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.requiredNote {
+    color: #FF0000;
+    font-size: medium;
+    font-weight: bold;
+}
+
+fieldset {
+    background-color: #F5F5F5;
+    border: 2px ridge #C0C0C0;
+}
+
+legend {
+    background-color: #A61492;
+    border-color: #662071;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: larger;
+    font-variant: small-caps;
+    font-weight: bold;
+    letter-spacing: .02em;
+    padding: 1px;
+    text-align: center;
+    width: 290px;
+}
+
+label {
+    color: #A61492;
+    font-family: Times;
+    font-size: larger;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+#piercedEarsLabel {
+    color: #A61492;
+    font-family: Times;
+    font-size: larger;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    margin: 2px;
+    padding: 2px;
+}
+
+#groups {
+    color: #643AE6;
+    border-color: purple;
+    border-width: 1px;
+    font-size: medium;
+    font-family: Arial;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 260px;
+}
+
+#localStorageNav {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#items {
+    background-color: #FAFAFA;
+    border: 2px inset #C0C0C0;
+}
+
+#clearData {
+    color: #F54D70;
+    font: medium Times;
+    font-weight: bold;
+}
+
+#clearData:visited {
+    color: #C0C0C0;
+}
+
+#addRecipient {
+    color: #F54D70;
+    font: medium Times;
+    font-weight: bold;
+}
+
+#addRecipient:visited {
+    color: #C0C0C0;
+}
+
+#editRecipient {
+    color: #F54D70;
+    float: left;
+    font: medium Times;
+    font-weight: bold;
+}
+
+#editRecipient:visited {
+    color: #C0C0C0;
+}
+
+#deleteRecipient {
+    color: #F54D70;
+    float: right;
+    font: medium Times;
+    font-weight: bold;
+}
+
+#sunSign {
+    color: #643AE6;
+    font-size: medium;
+    font-family: Arial;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+footer {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#rows ul > li:nth-child(odd) { background-color:#F2CEF2; border: 1px dotted purple;}
+#rows ul > li:nth-child(even) { background-color:white; }
