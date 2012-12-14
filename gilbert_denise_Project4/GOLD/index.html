@@ -1,0 +1,506 @@
+<!doctype html>
+    
+    <!-- Denise M. Gilbert
+    MIU Term 1212
+    Projects 4
+    December 13, 2012
+    Add Item HTML Page -->
+    
+<html lang="en">
+    
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>The Perfect Gift</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	
+	<link rel="stylesheet" href="themes/MyGiftBook1.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+	<link rel="stylesheet" href="CSS/style.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<!-- <script src="js/libs/modernizr.custom.min.js"></script> -->
+
+</head>
+
+<body>
+    
+    <!--  HOME PAGE -->
+
+    <div data-role="page" id="home">
+	
+	<div data-role="header" data-position="fixed" data-theme="a">
+	    <div class="logo" data-inline="true"><img src="img/smallLogo2.png" alt="The Perfect Gift Logo" ><a href="#loginScreen" data-role="button" data-mini="true" class="login" data-theme="d" data-rel="dialog" data-transition="pop">Log In</a></div>
+	    
+	</div>
+	
+	<div data-role="content" data-theme="b">
+	    <img src="img/CTA6.png" alt="Main Home Page Image">
+	    <!--  <a href="additem.html" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" data-theme="b" data-mini="true" id="ctaButton">Add Gift Recipient</a> -->
+	    <a href="#addItem" data-role="button" data-inline="false" data-icon="arrow-r" data-iconpos="right" data-theme="d" data-mini="false" id="addItemButton">Add Gift Recipient</a>
+	</div>
+	
+	<div data-role="content" data-theme="b">
+	    <ul data-role="listview" data-filter="true" data-divider-theme="b" data-filter-placeholder="SEARCH" data-inset="true">
+		<li data-role="list-divider" class="browseListDivider">Browse Gifting Categories . . .</li>
+		<li data-theme="b"><a href="#favorites" class="liLabels"><img src="img/heart3.png" alt="Favorites Icon">Favorites</a></li>
+		<li data-theme="d"><a href="#giftideas" class="liLabels"><img src="img/gift3.png" alt="Gift Ideas Icon">Gift Ideas</a></li>
+		<li data-theme="f"><a href="#displayLocalStorage" class="liLabels"><img src="img/recipients4.png" alt="Recipients Icon">Recipients</a></li>
+		<li data-theme="g"><a href="#newsStream" class="liLabels"><img src="img/wish2.png" alt="Notepad Icon">Up & Coming Events<br>(News Stream)</a></li>
+		<li data-theme="h"><a href="#zodiacSign" class="liLabels"><img src="img/silverZodiacSigns.png" alt="Zodiac Signs Icon">Zodiac Signs</a></li>
+	    </ul>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter" data-theme="a">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <!--  LOCAL STORAGE NAVIGATION
+    
+    <div id="localStorageNav">
+	    <a href="#" id="clearData">Clear Stored Data</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	    <a href="#" id="displayData">Display Data</a>
+	    <a href="#addItem" id="addRecipient" style="display: none;">Add Recipient</a>
+    </div> -->
+    
+    <!--  FORM PAGE -->
+    
+    <div data-role="page" id="addItem" data-theme="k">
+	<div data-role="header" data-position="fixed">
+	    <div class="logo"><a href=#home><img src="img/smallLogo2.png" alt="The Perfect Gift Logo"></a></div>
+	</div>
+	
+	<div data-role="content">
+	    
+	    <form action="" id="addRecipientForm">
+		
+		<div data-role="fieldcontain">
+		    <a href="#displayLocalStorage" id="displayData" class="display" data-mini="false" data-role="button" data-theme="d" data-inline="false">View All Recipients</a>
+		    </div>
+		
+		<span class="pageInfo">Add New Recipient</span><br>
+		<span class="topParagraph">Use this form to add gift recipients to your gift list.</span><br><br>
+		
+		<fieldset data-role="fieldcontain">
+		<legend>&mdash; Recipient &mdash;</legend>
+		<span class="requiredNote">* = fields are required</span>
+		
+		    <div data-role="fieldcontain">
+			<label for="fname"><strong>*First Name:</strong></label>
+			<input type="text" name="fname" id="fname" placeholder="Enter Recipient's First Name" class="required"/>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<label for="lname"><strong>*Last Name:</strong></label>
+			<input type="text" name="lname" id="lname" placeholder="Enter Recipient's Last Name" class="required"/>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<label for="bday"><strong>Birthday:  (MM-DD-YYYY)</strong></label>
+			<input type="date" name="bday" id="bday" value="YYYY-MM-DD"/>
+		    </div>
+		
+		</fieldset>
+		
+		<fieldset data-role="fieldcontain">
+		<legend>&mdash; Sizes &mdash;</legend>
+		
+		    <div data-role="fieldcontain">
+			<label for="topsize"><strong>Tops/Shirts/Blouses:</strong></label>
+			<input type="text" name="topsize" id="topsize" placeholder="Enter Recipient's Top Size"/>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<label for="bottomsize"><strong>Bottoms/Pants/Skirts:</strong></label>
+			<input type="text" name="bottomsize" id="bottomsize" placeholder="Enter Recipient's Bottom Size"/>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<label for="shoesize"><strong>Footwear:</strong></label>
+			<input type="text" name="shoesize" id="shoesize" placeholder="Enter Recipient's Shoe Size"/>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<label for="ringsize" data-theme="k"><strong>Ring Size:</strong></label>
+			<select name="ringsize" id="ringsize" data-native-menu="false" data-theme="k">
+			    <option value="Select a Ring Size" selected="selected">Select a Ring Size</option>
+			    <option value="5">5</option>
+			    <option value="6">6</option>
+			    <option value="7">7</option>
+			    <option value="8">8</option>
+			    <option value="9">9</option>
+			    <option value="10">10</option>
+			    <option value="11">11</option>
+			</select>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<fieldset data-role="controlgroup">
+			    <input type="checkbox" value="piercedEars" name="piercedEars" id="piercedEars"/>
+			    <label for="piercedEars" id="piercedEarsLabel"><strong>Pierced Ears</strong></label>
+			</fieldset>
+		    </div>
+		
+		</fieldset>
+		
+		<fieldset data-role="fieldcontain">
+		<legend>&mdash; Favorites &mdash;</legend>
+		
+		    <div data-role="fieldcontain">
+			<label for="color"><strong>Color:</strong></label>
+			<select name="color" id="color" data-native-menu="false" data-theme="k">
+			    <option value="Select a Color" selected="selected">Select a Color</option>
+			    <option value="Black">Black</option>
+			    <option value="Blue">Blue</option>
+			    <option value="Brown">Brown</option>
+			    <option value="Green">Green</option>
+			    <option value="Orange">Orange</option>
+			    <option value="Purple">Purple</option>
+			    <option value="Red">Red</option>
+			    <option value="White">White</option>
+			</select>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<label for="flowers"><strong>Flower(s):</strong></label>
+			<input type="text" name="flowers" id="flowers" placeholder="Enter Recipient's Favorite Flowers"/>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<label for="foods"><strong>Food(s):</strong></label>
+			<input type="text" name="foods" id="foods" placeholder="Enter Recipient's Favorite Foods"/>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<label for="restaurants"><strong>Restaurant(s):</strong></label>
+			<textarea name="restaurants" id="restaurants" placeholder="Enter Recipient's Favorite Restaurants"></textarea>
+		    </div>
+		
+		</fieldset>
+		
+		<fieldset data-role="fieldcontain">
+		<legend>&mdash; Wish List &mdash;</legend>
+		
+		    <div data-role="fieldcontain">
+			<label for="giftRating"><strong>Gift Rating:</strong></label>
+			<input type="range" name="giftRating" id="giftRating" value="10" min="0" max="10" data-theme="f"/>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<label for="giftwanted"><strong>Gift Wanted:</strong></label>
+			<input type="text" name="giftwanted" id="giftwanted" placeholder="Enter a Gift Wanted by Recipient"/>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<label for="price"><strong>Price:</strong></label>
+			<input type="text" name="price" id="price" placeholder="Enter the Price of the Gift Wanted"/>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<label for="wheretobuy"><strong>Where to Buy:</strong></label>
+			<textarea name="wheretobuy" id="wheretobuy" placeholder="Enter Where to Buy the Gift Wanted"></textarea>
+		    </div>
+		    
+		    <div data-role="fieldcontain">
+			<input type="submit" class="submit" value="Save Gift Recipient" data-inline="false" data-theme="d" id="saveRecipient"/>
+			<input type="reset" value="Cancel" data-inline="false" data-theme="k" id="reset"/>
+			<!-- <a href="" data-inline="true" id="cancelLink">Cancel</a> -->
+		    </div>
+		
+		</fieldset>
+		
+		<a href="#addRecipientErrors" id="addRecipientErrorsLink" data-rel="dialog" data-transition="pop">Open Errors</a>
+		
+	    </form>
+	    
+	</div>
+	
+	    <div data-role="footer" data-position="fixed" data-id="samefooter">
+		<div data-role="navbar" data-iconpos="top">
+		    <ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#about" data-icon="info">About</a></li>
+			<li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+			<li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		    </ul>
+		</div>
+	    </div>
+	</div>
+    
+    <!--  DISPLAY LOCAL STORAGE PAGE -->
+    
+    <div data-role="page" id="displayLocalStorage" data-add-back-btn="false" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <div class="logo"><a href=#home><img src="img/smallLogo2.png" alt="The Perfect Gift Logo"></a></div>
+	</div>
+	
+	<div data-role="content" data-theme="h" id="browseRecipient">
+	    <ul data-role="listview" data-filter="true" data-divider-theme="b" data-filter-placeholder="SEARCH" data-inset="false">
+		<li data-role="list-divider" class="browseListDivider">Browse Recipient Info . . .</li>
+	    </ul>
+	</div>
+	
+	<div data-role="content" id="localStorageContent">
+	    
+	</div>
+	
+	<a href="#" data-role="button" id="clearData" data-mini="false" data-theme="k" data-inline="false">Delete ALL Recipients</a>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+	    
+    
+    <!--  ABOUT PAGE-->
+    
+    <div data-role="page" id="about" data-add-back-btn="false" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <div class="logo"><a href=#home><img src="img/smallLogo2.png" alt="The Perfect Gift Logo"></a></div>
+	</div>
+	
+	<div data-role="content">
+	    
+	    <p class="pageInfo">About Us . . .</p>
+	    
+	    <div id="tabbed_box_1" class="tabbed_box">  
+    
+    <div class="tabbed_area">  
+        <ul class="tabs">  
+    <li><a href="javascript:tabSwitch('tab_1', 'content_1');" id="tab_1" class="active">Contact</a></li>  
+    <li><a href="javascript:tabSwitch('tab_2', 'content_2');" id="tab_2">GitHub Links</a></li>  
+    <li><a href="javascript:tabSwitch('tab_3', 'content_3');" id="tab_3">Credit</a></li>  
+</ul>   
+        <div id="content_1" class="content">  
+            <ul>
+		<li>Denise M. Gilbert</li>
+		<li>E-mail:  dmg763@fullsail.edu</li>
+		<li>iChat:  dmg763@fullsail.edu</li>
+	    </ul>  
+        </div>  
+        <div id="content_2" class="content">  
+            <ul>
+		<li><a href="https://github.com/dmg763/MIU.git">GitHub Page</a></li>
+		<li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html">Gold</a></li>
+		<li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html">Bronze</a></li>
+		<li><a href="#home" data-icon="home">Home</a></li>
+	    </ul>  
+        </div>  
+        <div id="content_3" class="content">  
+            <ul>
+		<li>Silver Icons:<br>Mysitemyway Design Team</li>
+	    </ul> 
+        </div>  
+    </div>  
+</div>
+
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info" class="ui-btn-active ui-state-persist">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <!--  FAVORITES PAGE-->
+    
+    <div data-role="page" id="favorites" data-add-back-btn="false" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <div class="logo"><a href=#home><img src="img/smallLogo2.png" alt="The Perfect Gift Logo"></a></div>
+	</div>
+	
+	<div data-role="content">
+	    <span class="pageInfo">Favorites Page</span><br>
+	    <span class="topParagraph">This page will include information about favorites.</span>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <!--  GIFT IDEAS PAGE-->
+    
+    <div data-role="page" id="giftideas" data-add-back-btn="false" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <div class="logo"><a href=#home><img src="img/smallLogo2.png" alt="The Perfect Gift Logo"></a></div>
+	</div>
+	
+	<div data-role="content" data-theme="b">
+	    <ul data-role="listview" data-filter="true" data-divider-theme="b" data-filter-placeholder="SEARCH" data-inset="false">
+		<li data-role="list-divider" class="browseListDivider">Browse Gift Ideas . . .</li>
+		<li data-theme="d"><a><img src="img/rose2.png" alt="Flowers Image">Flowers</a></li>
+		<li data-theme="d"><a><img src="img/girl.png" alt="Image of Girl">Gifts for Her</a></li>
+		<li data-theme="d"><a><img src="img/guy.png" alt="Image of Guy">Gifts for Him</a></li>
+		<li data-theme="d"><a><img src="img/strawberry.png" alt="Image of a Strawberry">Goodies</a></li>
+		<li data-theme="d"><a><img src="img/diamond.png" alt="Image of a Diamond">Jewelry</a></li>
+	    </ul>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <!--  NEWS STREAM PAGE-->
+    
+    <div data-role="page" id="newsStream" data-add-back-btn="true" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <div class="logo"><a href=#home><img src="img/smallLogo2.png" alt="The Perfect Gift Logo"></a></div>
+	</div>
+	
+	<div data-role="content" data-theme="h" id="newsSection">
+	    <ul data-role="listview" data-filter="true" data-divider-theme="b" data-filter-placeholder="SEARCH" data-inset="false">
+		<li data-role="list-divider" class="browseListDivider">Browse Upcoming Events . . .</li>
+		<li class="newsStreamHeader" data-theme="g"><p>December 6, 2012</p></li>
+		<li class="secondLevel" data-theme="c"><p>Birthday &ndash; Jamie Gilbert</p></li>
+		<li class="thirdLevel" data-theme="c"><p>Some type of news or gifting ideas, etc. will go here.</p></li>
+		<li class="newsStreamHeader" data-theme="g"><p>November 30, 2012</p></li>
+		<li class="secondLevel" data-theme="c"><p>Anniversary &ndash; Darlene & Jeff Smith</p></li>
+		<li class="thirdLevel" data-theme="c"><p>Some type of news or gifting ideas, etc. will go here.</p></li>
+		<li class="newsStreamHeader" data-theme="g"><p>October 31, 2012</p></li>
+		<li class="secondLevel" data-theme="c"><p>HALLOWEEN</p></li>
+	    </ul>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+    
+    <!--  ZODIAC SIGN PAGE-->
+    
+    <div data-role="page" id="zodiacSign" data-add-back-btn="false" data-theme="c">
+	<div data-role="header" data-position="fixed">
+	    <div class="logo"><a href=#home><img src="img/smallLogo2.png" alt="The Perfect Gift Logo"></a></div>
+	</div>
+	
+	<div data-role="content" data-theme="h" id="zodiacsection">
+	    <ul data-role="listview" data-filter="true" data-divider-theme="b" data-filter-placeholder="SEARCH" data-inset="false">
+		<li data-role="list-divider" class="browseListDivider">Browse Zodiac Signs . . .</li>
+		<li><a><img src="img/Aquarius2.png" alt="Aquarius Image" id="aquarius">Aquarius<br><p>January 20 - February 18</p></a></li>
+		<li><a><img src="img/Aries2.png" alt="Aries Image" id="aries">Aries<br><p>March 21 - April 19</p></a></li>
+		<li><a><img src="img/Cancer2.png" alt="Cancer Image" id="cancer">Cancer<br><p>June 21 - July 22</p></a></li>
+		<li><a><img src="img/Capricorn2.png" alt="Capricorn Image" id="capricorn">Capricorn<br><p>December 22 - January 19</p></a></li>
+		<li><a><img src="img/Gemini2.png" alt="Gemini Image" id="gemini">Gemini<br><p>May 21 - June 20</p></a></li>
+		<li><a><img src="img/Leo2.png" alt="Leo Image" id="leo">Leo<br><p>July 23 - August 22</p></a></li>
+		<li><a><img src="img/Libra2.png" alt="Libra Image" id="libra">Libra<br><p>September 23 - October 22</p></a></li>
+		<li><a><img src="img/Pisces2.png" alt="Pisces Image" id="pisces">Pisces<br><p>February 19 - March 20</p></a></li>
+		<li><a><img src="img/Sagittarius2.png" alt="Sagittarius Image" id="sagittarius">Sagittarius<br><p>November 22 - December 21</p></a></li>
+		<li><a><img src="img/Scorpio2.png" alt="Scorpio Image" id="scorpio">Scorpio<br><p>October 23 - November 21</p></a></li>
+		<li><a><img src="img/Taurus2.png" alt="Taurus Image" id="taurus">Taurus<br><p>April 20 - May 20</p></a></li>
+		<li><a><img src="img/Virgo2.png" alt="Virgo Image" id="virgo">Virgo<br><p>August 23 - September 22</p></a></li>
+	    </ul>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="samefooter">
+	    <div data-role="navbar" data-iconpos="top">
+		<ul>
+		    <li><a href="#home" data-icon="home">Home</a></li>
+		    <li><a href="#about" data-icon="info">About</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/GOLD/index.html" data-icon="gear">Gold</a></li>
+		    <li><a href="http://dmg763.github.com/MIU/gilbert_denise_Project4/BRONZE/index.html" data-icon="gear">Bronze</a></li>
+		</ul>
+	    </div>
+	</div>
+    </div>
+	    
+	    <!--  ERROR PAGE-->
+    
+    <div data-role="dialog" id="addRecipientErrors" data-theme="c">
+	
+	<div data-role="header" data-position="fixed">
+	    <h1>Missing Fields!</h1>
+	</div>
+	
+	<div data-role="content">
+	    <ul>
+		<li>Test</li>
+	    </ul>
+	</div>
+	
+    </div>
+    
+    <div data-role="dialog" id="loginScreen" data-theme="c">
+	    <div data-role="header" data-position="fixed">
+		<h1>Please Log In</h1>
+	    </div>
+	    
+	    <div data-role="content">
+		<form action="" id="loginForm">
+		    <label for="userName"><strong>User Name:</strong></label>
+		    <input type="text" id="userName" />
+		    <label for="password"><strong>Password:</strong></label>
+		    <input type="password" id="password" />
+		    
+		    <div data-role="fieldcontain">
+			<input type="submit" class="submit" value="Submit" data-inline="false" data-theme="d" id="submitLogin"/>
+			<input type="reset" value="Cancel" data-inline="false" data-theme="k" id="resetLogin"/>
+			<!-- <a href="" data-inline="true" id="cancelLink">Cancel</a> -->
+		    </div>
+		</form>
+	    </div>
+	</div>
+
+	<!-- JavaScript under here -->
+	
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script src="js/libs/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="js/json.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+	<script src="js/functions.js" type="text/javascript"></script>
+</body>
+</html>
